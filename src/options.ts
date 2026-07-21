@@ -58,7 +58,7 @@ export function parseJsonValue(raw: string, label: string): JsonValue {
   try {
     return JSON.parse(raw) as JsonValue;
   } catch (error) {
-    throw new Error(`${label} must be valid JSON: ${error instanceof Error ? error.message : "parse failed"}`);
+    throw new Error(`${label} must be valid JSON: ${error instanceof Error ? error.message : "parse failed"}`, { cause: error });
   }
 }
 

@@ -27,15 +27,19 @@
     "build": "tsc -p tsconfig.json",
     "dev": "tsx src/cli.ts",
     "check": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint src/",
     "test": "node --import tsx --test test/*.test.ts"
   },
   "dependencies": {
     "commander": "^14.0.2"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/node": "^24.10.1",
+    "eslint": "^10.7.0",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.65.0"
   },
   "engines": {
     "node": ">=20.0.0"
